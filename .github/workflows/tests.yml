@@ -21,7 +21,7 @@ permissions:
 jobs:
   build:
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         # available runners: https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for-public-repositories
         os: ${{ fromJSON(inputs.os || '["ubuntu-latest", "ubuntu-22.04", "macos-15-intel"]') }}
